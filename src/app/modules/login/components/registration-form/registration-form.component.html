@@ -1,0 +1,40 @@
+<form [formGroup]="form">
+    <mat-form-field floatLabel="always">
+        <mat-label>Email address</mat-label>
+        <input matInput
+               type="email"
+               formControlName="email">
+        <mat-error>Enter a valid email address.</mat-error>
+    </mat-form-field>
+
+    <div formGroupName="passwords">
+        <mat-form-field floatLabel="always"
+                        margin-top>
+            <mat-label>Password</mat-label>
+            <input matInput
+                   type="password"
+                   formControlName="password">
+            <mat-error>Enter a password.</mat-error>
+        </mat-form-field>
+
+        <mat-form-field floatLabel="always"
+                        margin-top>
+            <mat-label>Confirm password</mat-label>
+            <input matInput
+                   type="password"
+                   formControlName="confirmPassword">
+            <mat-error>Passwords do not match.</mat-error>
+        </mat-form-field>
+    </div>
+
+    <div *ngIf="error"
+         class="form-error">
+        {{ error }}
+    </div>
+
+    <button mat-button
+            background="primary"
+            color="primary"
+            centered
+            (click)="submit()">Submit</button>
+</form>

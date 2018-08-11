@@ -1,0 +1,47 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+@import '~assets/scss/material.scss';
+@import '~assets/scss/theme.scss';
+
+a:not([href]):not([tabindex]) {
+    color: blue;
+    cursor: pointer;
+
+    &:hover {
+        color: lighten(blue, 20%);
+    }
+}
+
+body {
+    background: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+
+html {
+  height: 100%;
+  overflow: auto !important;
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.page {
+  padding: 24px;
+}
+
+.form-error {
+  color: mat-color(mat-palette($mat-red));
+  font-size: .9rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+[margin-top] {
+    margin-top: 8px;
+}
+
+

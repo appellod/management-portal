@@ -1,0 +1,45 @@
+<mat-card>
+    <ng-container *ngIf="!loadingMessage">
+        <div *ngIf="action === Action.LogIn">
+            <h2>Login</h2>
+            <app-login-form (logIn)="onLogIn($event)"></app-login-form>
+        </div>
+
+        <div *ngIf="action === Action.Register">
+            <h2>Create Account</h2>
+            <app-registration-form (register)="onRegister($event)"></app-registration-form>
+        </div>
+
+        <div *ngIf="action === Action.RequestPasswordReset">
+            <h2>Reset Password</h2>
+            <app-password-reset-request-form (passwordResetRequested)="onPasswordResetRequested($event)"></app-password-reset-request-form>
+        </div>
+
+        <div *ngIf="action === Action.ResetPassword">
+            <h2>Reset Password</h2>
+            <app-password-reset-form (passwordReset)="onPasswordReset($event)"></app-password-reset-form>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6"
+                 *ngIf="action !== Action.LogIn"
+                 col-6>
+                <a (click)="setAction(Action.LogIn)">Log In</a>
+            </div>
+
+            <div class="col-sm-6"
+                 *ngIf="action !== Action.Register"
+                 col-6>
+                <a (click)="setAction(Action.Register)">Create Account</a>
+            </div>
+
+            <div class="col-sm-6"
+                 *ngIf="action !== Action.RequestPasswordReset && action !== Action.ResetPassword"
+                 col-6>
+                <a (click)="setAction(Action.RequestPasswordReset)">Reset Password</a>
+            </div>
+        </div>
+    </ng-container>
+
+    <app-loading-message *ngIf="loadingMessage">Logging in...</app-loading-message>
+</mat-card>

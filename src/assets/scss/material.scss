@@ -1,0 +1,130 @@
+@import '~bootstrap/scss/bootstrap-grid.scss';
+@import '~assets/scss/theme.scss';
+
+button.mat-button {
+  text-transform: uppercase;
+
+  &[color=primary]:hover {
+    color: $primary-highlight;
+  }
+
+  &[background=primary] {
+    background: $primary;
+    color: white;
+
+    &:hover {
+      background: $primary-highlight;
+      color: white;
+    }
+  }
+
+  &[centered] {
+    display: block;
+    margin: 8px auto;
+  }
+
+  .mat-button-focus-overlay {
+    display: none;
+  }
+}
+
+button.mat-menu-item {
+  height: 36px;
+  line-height: 36px;
+}
+
+div.mat-card-header-text {
+  margin: 0px;
+}
+
+div.mat-dialog-actions {
+  justify-content: center;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+div.mat-dialog-content {
+  p {
+    margin: 8px 0px;
+  }
+}
+
+div.mat-menu-content {
+  padding: 0px;
+}
+
+div.mat-sort-header-sorted {
+  color: black;
+}
+
+mat-dialog-container.mat-dialog-container {
+  padding: 20px 24px 24px;
+}
+
+mat-nav-list.mat-nav-list {
+  padding-top: 0px;
+
+  a.mat-list-item {
+    height: 80px;
+
+    &:not(.active):hover {
+      background: $primary-highlight;
+    }
+
+    &.active {
+      background: white;
+
+      div.mat-list-item-content {
+        color: $primary;
+      }
+    }
+
+    div.mat-list-item-content {
+      color: white;
+      flex-wrap: wrap;
+      height: 80px;
+      justify-content: center;
+
+      mat-icon {
+          font-size: 2rem;
+          height: 12px;
+          text-align: center;
+          width: 100%;
+      }
+    }
+  }
+}
+
+mat-form-field.mat-form-field {
+  display: block;
+}
+
+mat-paginator .mat-paginator-container {
+  padding: 0px;
+}
+
+mat-spinner.mat-spinner {
+  display: inline-block;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+mat-toolbar.mat-toolbar-single-row {
+  height: 36px;
+}
+
+snack-bar-container.mat-snack-bar-container {
+  padding-left: 40px;
+}
+
+table.mat-table {
+  border: 1px solid rgba(0,0,0,.12);
+
+  .mat-header-row {
+    background: #f0f0f0;
+  }
+
+  .mat-row:nth-child(even) {
+    background: #f7f7f7;
+  }
+}

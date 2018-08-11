@@ -1,0 +1,42 @@
+@import '~assets/scss/theme.scss';
+
+mat-toolbar.mat-primary {
+  background: $primary
+}
+
+mat-sidenav {
+  background: $primary;
+  width: 150px;
+
+  mat-divider {
+    border-top-color: rgba(255, 255, 255, 0.1);
+  }
+
+  mat-toolbar {
+    mat-icon {
+      margin-right: 4px;
+    }
+  }
+}
+
+mat-sidenav-content {
+  background: white;
+
+  mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    button {
+      text-transform: none;
+    }
+  }
+}
+
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.sidenav-container {
+  height: 100%;
+}

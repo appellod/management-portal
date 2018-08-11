@@ -1,0 +1,45 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer
+               class="sidenav"
+               fixedInViewport="true"
+               role="navigation"
+               mode="side"
+               opened="true">
+    <mat-toolbar color="primary"
+                 class="center">
+      <mat-icon>home</mat-icon>
+      EXAMPLE
+    </mat-toolbar>
+    <mat-nav-list>
+      <mat-divider *ngIf="router.url !== '/users'"></mat-divider>
+      <a mat-list-item
+         routerLink="/users"
+         [ngClass]="{ active: router.url === '/users' }">
+        <mat-icon>person</mat-icon>
+        Users
+      </a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <span></span>
+      <span class="fill-remaining-space"></span>
+      <button mat-button
+              background="primary"
+              [matMenuTriggerFor]="menu">
+        <mat-icon>person</mat-icon>
+        {{ identityService.user.email }}
+        <mat-icon>keyboard_arrow_down</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu"
+                xPosition="before"
+                [overlapTrigger]="false">
+        <button mat-menu-item
+                (click)="logout()">Log out</button>
+      </mat-menu>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

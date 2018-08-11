@@ -1,0 +1,31 @@
+@import '~assets/scss/theme.scss';
+
+h2 {
+  margin: 0px 0px 16px;
+}
+
+table {
+  width: 100%;
+
+  a {
+    color: lighten(mat-color($foreground, secondary-text), 50%);
+    margin-left: 8px;
+    vertical-align: middle;
+
+    &:hover {
+      color: mat-color($foreground, secondary-text);
+    }
+  }
+
+  .mat-column-actions {
+    text-align: right;
+  }
+}
+
+.offset-sm-6 {
+  text-align: right;
+
+  button {
+    margin-top: 12px;
+  }
+}

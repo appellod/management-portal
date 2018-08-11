@@ -1,0 +1,36 @@
+@import '~assets/scss/theme.scss';
+
+a {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 16px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+button.mat-button {
+  display: block;
+  margin: 0px auto;
+}
+
+h2 {
+  margin: 0px 0px 20px;
+  text-align: center;
+}
+
+mat-card {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.row {
+  margin: 0px;
+
+  .col-sm-6 {
+    padding: 0px;
+  }
+}
+
